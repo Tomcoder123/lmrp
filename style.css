@@ -1,18 +1,38 @@
-*{
-    margin: 0;
-    padding: 0;
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap');
+
+:root{
+	--main-background: #0b0c0f;
+	--main-fonts-color: #fff;
+	--main-decor-color:#00a9e2;
+    --main-header-background:#21252e;
+	--main-font-family: 'Poppins', sans-serif;
 }
+
+*{
+	margin: 0;
+	padding: 0;
+	scroll-behavior: smooth;
+    align-items: center;
+}
+
+main{
+	padding: 0;
+	width: 100%;
+	height: 100%;
+	background: var(--main-background);
+}
+
 body{
     background-image: url(images/lmrp.jpg);
     background-size: cover;
+
 
 }
 .first{
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
     text-align: center;
-    top: 50%;
-    left: 38%;
-    position: absolute;
+    align-items: center;
+    position: relative ;
 }
 .btn{
     display: inline-block;
@@ -29,4 +49,23 @@ body{
     border: 1px solid #f44336;
     background: tomato;
     transition: 1s;
+}
+/*SCRoll bar*/
+::-webkit-Scrollbar{
+    width: 5px; 
+	background: rgba(5,5,5,1);
+}
+::-webkit-Scrollbar-thumb{
+	border-radius: 10px;
+	background: var(--main-decor-color);
+	box-shadow: inset 0 0 20px var(--main-decor-color);
+}
+::-webkit-Scrollbar-track{
+	margin-top: 80px;
+	border-radius: 10px;
+}
+@media screen and (max-width: 800px){
+body{
+    background-size: auto;
+}
 }
